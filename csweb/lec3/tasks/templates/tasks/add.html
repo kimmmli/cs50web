@@ -1,0 +1,13 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <h1>Add Task:</h1>
+    # what the user sumbit will be sent to the url 'task:add'
+    <form action="{% url 'tasks:add' %}" method="post">
+        # we have to add this token so that the submitted information will not be stolen by others
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}"> All tasks</a>
+{% endblock %}
