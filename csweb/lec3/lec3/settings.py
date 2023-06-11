@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# 这个是主项目界面，需要更新both settings.py and urls.py
 INSTALLED_APPS = [
     'tasks',
     'newyear',
